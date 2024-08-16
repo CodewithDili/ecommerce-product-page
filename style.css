@@ -1,0 +1,133 @@
+/* Reset some basic elements */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+    color: #333;
+}
+
+/* Container for the product details */
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Product image styling */
+.product-image {
+    flex: 1;
+    min-width: 300px;
+}
+
+.product-image img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+/* Product details styling */
+.product-details {
+    flex: 2;
+    margin-left: 20px;
+    min-width: 300px;
+}
+
+.product-title {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.product-description {
+    margin-bottom: 20px;
+}
+
+.product-price {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #e60023;
+}
+
+.add-to-cart-btn {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Related products section */
+.related-products {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.related-products h2 {
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+.related-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.related-item {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    flex-basis: calc(33% - 20px);
+    margin-bottom: 20px;
+}
+
+.related-item img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.related-title {
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+.related-price {
+    color: #e60023;
+    font-size: 1.1em;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .product-container {
+        flex-direction: column;
+    }
+
+    .product-details {
+        margin-left: 0;
+    }
+
+    .related-item {
+        flex-basis: calc(50% - 10px);
+    }
+}
+
+@media (max-width: 480px) {
+    .related-item {
+        flex-basis: 100%;
+    }
+}
